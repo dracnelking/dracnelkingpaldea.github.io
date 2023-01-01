@@ -1,0 +1,1 @@
+<input value="Hello World" id="myInput"></input>

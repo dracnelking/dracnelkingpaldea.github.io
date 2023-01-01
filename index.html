@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link  rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Yes, another Pokedex">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <title>Pokedex</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loader-div">
+    <div class="loader"></div>
+  </div>
+  <div class="modal">
+    <div class="modal-default-container"></div>
+      <div class="modal-loader"></div>
+    </div>
+  </div>
+  <main class="main">
+    <header class="header-sticky">
+        <nav class="nav-bar">
+            <div class="burger-button">
+              <div class="burgerline"></div>
+              <div class="burgerline"></div>
+              <div class="burgerline"></div>
+            </div>
+            <div class="search-text">
+            <input type="text" class="search-input"
+            placeholder="Search for a Pokemon..."    android:id="@+id/edittext_done"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter some texts"
+            android:imeOptions="actionDone">
+            <button class="clear-search"></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pkmn-list">
+      <div id="filter-container"></div>
+      <figure class="pokemon-missing">
+        <img src="img/pokeball-miss.png" alt="">
+        <p>I don't think that pokemon does exist, try again!</p>
+      </figure>
+      <h2 class="gen-name first" id="1">1° Gen</h2>
+      <!--006-->
+      <article class="pkmn-card charizard fire">
+        <h3 class="pkmn-name">Charizard</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/charizard.png" onClick="Charizard()" class="sprite-charizard" height="96" width="96" alt="charizard" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card charizard fire">
+        <h3 class="pkmn-name">Charizard</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/charizard.png" onClick="CharizardS()" class="sprite-charizard" height="96" width="96" alt="charizard" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card dragonite dragon flying2">
+        <h3 class="pkmn-name">dragonite</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/dragonite.png" onClick="Dragonite()" class="sprite-dragonite" loading="lazy" height="96" width="96" alt="dragonite">
+        </figure>
+      </article>
+      <article class="pkmn-card dragonite dragon flying2">
+        <h3 class="pkmn-name">dragonite</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/dragonite.png" onClick="DragoniteS()" class="sprite-dragonite" loading="lazy" height="96" width="96" alt="dragonite">
+        </figure>
+      </article>
+      
+      <!--SEGUNDA GENERACION-->
+      <!--164-->
+      <h2 class="gen-name second" id="2">2° Gen</h2>
+      <!--196-->
+      <article class="pkmn-card espeon psychic">
+        <h3 class="pkmn-name">espeon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/espeon.png" onClick="Espeon()" class="sprite-espeon" loading="lazy" height="96" width="96" alt="espeon">
+        </figure>
+      </article>
+      <article class="pkmn-card espeon psychic">
+        <h3 class="pkmn-name">espeon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/espeon.png" onClick="EspeonS()" class="sprite-espeon" loading="lazy" height="96" width="96" alt="espeon">
+        </figure>
+      </article>
+      <!--197-->
+      <article class="pkmn-card umbreon dark">
+        <h3 class="pkmn-name">umbreon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/umbreon.png" onClick="Umbreon()" class="sprite-umbreon" loading="lazy" height="96" width="96" alt="umbreon">
+        </figure>
+      </article>
+      <article class="pkmn-card umbreon dark">
+        <h3 class="pkmn-name">umbreon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/umbreon.png" onClick="UmbreonS()" class="sprite-umbreon" loading="lazy" height="96" width="96" alt="umbreon">
+        </figure>
+      </article>
+
+      <!--TERCERA GENERACION-->
+
+      <h2 class="gen-name thrid" id="3">3° Gen</h2>
+      <!--373-->
+      <article class="pkmn-card salamence dragon flying2">
+        <h3 class="pkmn-name">salamence</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/salamence.png" onClick="salamence()" class="sprite-salamence" loading="lazy" height="96" width="96" alt="salamence">
+        </figure>
+      </article>
+      <article class="pkmn-card salamence dragon flying2">
+        <h3 class="pkmn-name">salamence</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/salamence.png" onClick="salamenceS()" class="sprite-salamence" loading="lazy" height="96" width="96" alt="salamence">
+        </figure>
+      </article>
+      
+<!--CUARTA GENERACION-->
+
+      <h2 class="gen-name forth" id="4">4° Gen</h2>
+      <!--445-->
+      <article class="pkmn-card garchomp dragon ground2">
+        <h3 class="pkmn-name">garchomp</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/garchomp.png" onClick="Garchomp()" class="sprite-garchomp" loading="lazy" height="96" width="96" alt="garchomp">
+        </figure>
+      </article>
+      <article class="pkmn-card garchomp dragon ground2">
+        <h3 class="pkmn-name">garchomp</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/garchomp.png" onClick="GarchompS()" class="sprite-garchomp" loading="lazy" height="96" width="96" alt="garchomp">
+        </figure>
+      </article>
+      <!--448-->
+      <article class="pkmn-card Lucario fighting">
+        <h3 class="pkmn-name">Lucario</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/lucario.png" onClick="Lucario()" class="sprite-Lucario" loading="lazy" height="96" width="96" alt="Lucario">
+        </figure>
+      </article>
+      <article class="pkmn-card Lucario fighting">
+        <h3 class="pkmn-name">Lucario</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/lucario.png" onClick="LucarioS()" class="sprite-Lucario" loading="lazy" height="96" width="96" alt="Lucario">
+        </figure>
+      </article>
+      
+<!--QUINTA GENERACION-->
+
+      <h2 class="gen-name fifth" id="5">5° Gen</h2>
+      <!--553-->
+      <article class="pkmn-card krookodile ground dark2">
+        <h3 class="pkmn-name">krookodile</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/krookodile.png" onClick="krookodile()" class="sprite-krookodile" height="96" width="96" alt="krookodile" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card krookodile ground dark2">
+        <h3 class="pkmn-name">krookodile</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/krookodile.png" onClick="krookodileS()" class="sprite-krookodile" height="96" width="96" alt="krookodile" loading="lazy">
+        </figure>
+      </article>
+      <!--625-->
+      <article class="pkmn-card bisharp dark steel2">
+        <h3 class="pkmn-name">bisharp</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/bisharp.png" onClick="bisharp()" class="sprite-bisharp" height="96" width="96" alt="bisharp" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card bisharp dark steel2">
+        <h3 class="pkmn-name">bisharp</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/bisharp.png" onClick="bisharpS()" class="sprite-bisharp" height="96" width="96" alt="bisharp" loading="lazy">
+        </figure>
+      </article>
+
+<!--SEXTA GENERACION-->
+
+      <h2 class="gen-name sixth" id="6">6° Gen</h2>
+      <!--663-->
+      <article class="pkmn-card talonflame fire flying2">
+        <h3 class="pkmn-name">talonflame</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/talonflame.png" onClick="talonflame()" class="sprite-talonflame" height="96" width="96" alt="talonflame" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card talonflame fire flying2">
+        <h3 class="pkmn-name">talonflame</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/talonflame.png" onClick="talonflameS()" class="sprite-talonflame" height="96" width="96" alt="talonflame" loading="lazy">
+        </figure>
+      </article>
+      <!--706-->
+      <article class="pkmn-card goodra dragon">
+        <h3 class="pkmn-name">goodra</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/goodra.png" onClick="goodra()" class="sprite-goodra" height="96" width="96" alt="goodra" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card goodra dragon">
+        <h3 class="pkmn-name">goodra</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/goodra.png" onClick="goodraS()" class="sprite-goodra" height="96" width="96" alt="goodra" loading="lazy">
+        </figure>
+      </article>
+
+<!--SEPTIMA GENERACION-->
+
+      <h2 class="gen-name seventh" id="7">7° Gen</h2>
+      <!--748-->
+      <article class="pkmn-card toxapex poison water2">
+        <h3 class="pkmn-name">toxapex</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/toxapex.png" onClick="toxapex()" class="sprite-toxapex" height="96" width="96" alt="toxapex" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card toxapex poison water2">
+        <h3 class="pkmn-name">toxapex</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/toxapex.png" onClick="toxapexS()" class="sprite-toxapex" height="96" width="96" alt="toxapex" loading="lazy">
+        </figure>
+      </article>
+      <!--778-->
+      <article class="pkmn-card mimikyu ghost fairy2">
+        <h3 class="pkmn-name">mimikyu</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/mimikyu.png" onClick="mimikyu()" class="sprite-mimikyu" height="96" width="96" alt="mimikyu" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card mimikyu ghost fairy2">
+        <h3 class="pkmn-name">mimikyu</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/mimikyu.png" onClick="mimikyuS()" class="sprite-mimikyu" height="96" width="96" alt="mimikyu" loading="lazy">
+        </figure>
+      </article>
+
+      <!--OCTAVA GENERACION-->
+      <h2 class="gen-name seventh" id="8">8° Gen</h2>
+      <!--823-->
+      <article class="pkmn-card corviknigth dark dragon2">
+        <h3 class="pkmn-name">corviknigth</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/corviknight.png" onClick="corviknigth()" class="sprite-corviknigth" height="96" width="96" alt="corviknigth" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card corviknigth dark dragon2">
+        <h3 class="pkmn-name">corviknigth</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/corviknight.png" onClick="corviknigthS()" class="sprite-corviknigth" height="96" width="96" alt="corviknigth" loading="lazy">
+        </figure>
+      </article>
+      <!--887-->
+      <article class="pkmn-card dragapult dragon">
+        <h3 class="pkmn-name">dragapult</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/normal/dragapult.png" onClick="dragapult()" class="sprite-dragapult" height="96" width="96" alt="dragapult" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card dragapult dragon">
+        <h3 class="pkmn-name">dragapult</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/home/shiny/dragapult.png" onClick="dragapultS()" class="sprite-dragapult" height="96" width="96" alt="dragapult" loading="lazy">
+        </figure>
+      </article>
+
+      <!--NOVENA GENERACION-->
+      <h2 class="gen-name seventh" id="8">9° Gen</h2>
+      <!--908-->
+      <article class="pkmn-card Meowscarada dark dragon2">
+        <h3 class="pkmn-name">Meowscarada</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/meowscarada.png" onClick="Meowscarada()" class="sprite-Meowscarada" height="96" width="96" alt="Meowscarada" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Meowscarada dark dragon2">
+        <h3 class="pkmn-name">Meowscarada SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/meowscarada.png" onClick="MeowscaradaS()" class="sprite-Meowscarada" height="96" width="96" alt="Meowscarada" loading="lazy">
+        </figure>
+      </article>
+      <!--911-->
+      <article class="pkmn-card Skeledirge dark dragon2">
+        <h3 class="pkmn-name">Skeledirge</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/skeledirge.png" onClick="Skeledirge()" class="sprite-Skeledirge" height="96" width="96" alt="Skeledirge" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Skeledirge dark dragon2">
+        <h3 class="pkmn-name">Skeledirge SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/skeledirge.png" onClick="SkeledirgeS()" class="sprite-Skeledirge" height="96" width="96" alt="Skeledirge" loading="lazy">
+        </figure>
+      </article>
+      <!--914-->
+      <article class="pkmn-card Quaquaval dark dragon2">
+        <h3 class="pkmn-name">Quaquaval</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/quaquaval.png" onClick="Quaquaval()" class="sprite-Quaquaval" height="96" width="96" alt="Quaquaval" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Quaquaval dark dragon2">
+        <h3 class="pkmn-name">Quaquaval SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/quaquaval.png" onClick="QuaquavalS()" class="sprite-Quaquaval" height="96" width="96" alt="Quaquaval" loading="lazy">
+        </figure>
+      </article>
+      <!--916-->
+      <article class="pkmn-card Oinkologne dark dragon2">
+        <h3 class="pkmn-name">Oinkologne</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/oinkologne-male.png" onClick="Oinkologne()" class="sprite-Oinkologne" height="96" width="96" alt="Oinkologne" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Oinkologne dark dragon2">
+        <h3 class="pkmn-name">Oinkologne SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/oinkologne-male.png" onClick="OinkologneS()" class="sprite-Oinkologne" height="96" width="96" alt="Oinkologne" loading="lazy">
+        </figure>
+      </article>
+      <!--917-->
+      <article class="pkmn-card Dudunsparce dark dragon2">
+        <h3 class="pkmn-name">Dudunsparce</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dudunsparce.png" onClick="Dudunsparce()" class="sprite-Dudunsparce" height="96" width="96" alt="Dudunsparce" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Dudunsparce dark dragon2">
+        <h3 class="pkmn-name">Dudunsparce SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dudunsparce.png" onClick="DudunsparceS()" class="sprite-Dudunsparce" height="96" width="96" alt="Dudunsparce" loading="lazy">
+        </figure>
+      </article>
+      <!--919-->
+      <article class="pkmn-card Spidops dark dragon2">
+        <h3 class="pkmn-name">Spidops</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/spidops.png" onClick="Spidops()" class="sprite-Spidops" height="96" width="96" alt="Spidops" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Spidops dark dragon2">
+        <h3 class="pkmn-name">Spidops SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/spidops.png" onClick="SpidopsS()" class="sprite-Spidops" height="96" width="96" alt="Spidops" loading="lazy">
+        </figure>
+      </article>
+      <!--921-->
+      <article class="pkmn-card Lokix dark dragon2">
+        <h3 class="pkmn-name">Lokix</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/lokix.png" onClick="Lokix()" class="sprite-Lokix" height="96" width="96" alt="Lokix" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Lokix dark dragon2">
+        <h3 class="pkmn-name">Lokix SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/lokix.png" onClick="LokixS()" class="sprite-Lokix" height="96" width="96" alt="Lokix" loading="lazy">
+        </figure>
+      </article>
+      <!--923-->
+      <article class="pkmn-card Rabsca dark dragon2">
+        <h3 class="pkmn-name">Rabsca</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/rabsca.png" onClick="Rabsca()" class="sprite-Rabsca" height="96" width="96" alt="Rabsca" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Rabsca dark dragon2">
+        <h3 class="pkmn-name">Rabsca SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/rabsca.png" onClick="RabscaS()" class="sprite-Rabsca" height="96" width="96" alt="Rabsca" loading="lazy">
+        </figure>
+      </article>
+      <!--925-->
+      <article class="pkmn-card Houndstone dark dragon2">
+        <h3 class="pkmn-name">Houndstone</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/houndstone.png" onClick="Houndstone()" class="sprite-Houndstone" height="96" width="96" alt="Houndstone" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Houndstone dark dragon2">
+        <h3 class="pkmn-name">Houndstone SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/houndstone.png" onClick="HoundstoneS()" class="sprite-Houndstone" height="96" width="96" alt="Houndstone" loading="lazy">
+        </figure>
+      </article>
+      <!--927-->
+      <article class="pkmn-card Espathra dark dragon2">
+        <h3 class="pkmn-name">Espathra</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/espathra.png" onClick="Espathra()" class="sprite-Espathra" height="96" width="96" alt="Espathra" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Espathra dark dragon2">
+        <h3 class="pkmn-name">Espathra SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/espathra.png" onClick="EspathraS()" class="sprite-Espathra" height="96" width="96" alt="Espathra" loading="lazy">
+        </figure>
+      </article>
+      <!--928-->
+      <article class="pkmn-card Farigiraf dark dragon2">
+        <h3 class="pkmn-name">Farigiraf</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/farigiraf.png" onClick="Farigiraf()" class="sprite-Farigiraf" height="96" width="96" alt="Farigiraf" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Farigiraf dark dragon2">
+        <h3 class="pkmn-name">Farigiraf SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/farigiraf.png" onClick="FarigirafS()" class="sprite-Farigiraf" height="96" width="96" alt="Farigiraf" loading="lazy">
+        </figure>
+      </article>
+      <!--930-->
+      <article class="pkmn-card Wugtrio dark dragon2">
+        <h3 class="pkmn-name">Wugtrio</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/wugtrio.png" onClick="Wugtrio()" class="sprite-Wugtrio" height="96" width="96" alt="Wugtrio" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Wugtrio dark dragon2">
+        <h3 class="pkmn-name">Wugtrio SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/wugtrio.png" onClick="WugtrioS()" class="sprite-Wugtrio" height="96" width="96" alt="Wugtrio" loading="lazy">
+        </figure>
+      </article>
+      <!--931-->
+      <article class="pkmn-card Dondozo dark dragon2">
+        <h3 class="pkmn-name">Dondozo</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dondozo.png" onClick="Dondozo()" class="sprite-Dondozo" height="96" width="96" alt="Dondozo" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Dondozo dark dragon2">
+        <h3 class="pkmn-name">Dondozo SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dondozo.png" onClick="DondozoS()" class="sprite-Dondozo" height="96" width="96" alt="Dondozo" loading="lazy">
+        </figure>
+      </article>
+      <!--932-->
+      <article class="pkmn-card Veluza dark dragon2">
+        <h3 class="pkmn-name">Veluza</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/veluza.png" onClick="Veluza()" class="sprite-Veluza" height="96" width="96" alt="Veluza" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Veluza dark dragon2">
+        <h3 class="pkmn-name">Veluza SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/veluza.png" onClick="VeluzaS()" class="sprite-Veluza" height="96" width="96" alt="Veluza" loading="lazy">
+        </figure>
+      </article>
+      <!--934-->
+      <article class="pkmn-card Palafin dark dragon2">
+        <h3 class="pkmn-name">Palafin</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/palafin-zero.png" onClick="Palafin()" class="sprite-Palafin" height="96" width="96" alt="Palafin" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Palafin dark dragon2">
+        <h3 class="pkmn-name">Palafin SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/palafin-zero.png" onClick="PalafinS()" class="sprite-Palafin" height="96" width="96" alt="Palafin" loading="lazy">
+        </figure>
+      </article>
+      <!--937-->
+      <article class="pkmn-card Arboliva dark dragon2">
+        <h3 class="pkmn-name">Arboliva</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/arboliva.png" onClick="Arboliva()" class="sprite-Arboliva" height="96" width="96" alt="Arboliva" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Arboliva dark dragon2">
+        <h3 class="pkmn-name">Arboliva SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/arboliva.png" onClick="ArbolivaS()" class="sprite-Arboliva" height="96" width="96" alt="Arboliva" loading="lazy">
+        </figure>
+      </article>
+      <!--939-->
+      <article class="pkmn-card Scovillain dark dragon2">
+        <h3 class="pkmn-name">Scovillain</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/scovillain.png" onClick="Scovillain()" class="sprite-Scovillain" height="96" width="96" alt="Scovillain" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Scovillain dark dragon2">
+        <h3 class="pkmn-name">Scovillain SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/scovillain.png" onClick="ScovillainS()" class="sprite-Scovillain" height="96" width="96" alt="Scovillain" loading="lazy">
+        </figure>
+      </article>
+      <!--941-->
+      <article class="pkmn-card Bellibolt dark dragon2">
+        <h3 class="pkmn-name">Bellibolt</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/bellibolt.png" onClick="Bellibolt()" class="sprite-Bellibolt" height="96" width="96" alt="Bellibolt" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Bellibolt dark dragon2">
+        <h3 class="pkmn-name">Bellibolt SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/bellibolt.png" onClick="BelliboltS()" class="sprite-Bellibolt" height="96" width="96" alt="Bellibolt" loading="lazy">
+        </figure>
+      </article>
+      <!--943-->
+      <article class="pkmn-card Revavroom dark dragon2">
+        <h3 class="pkmn-name">Revavroom</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/revavroom.png" onClick="Revavroom()" class="sprite-Revavroom" height="96" width="96" alt="Revavroom" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Revavroom dark dragon2">
+        <h3 class="pkmn-name">Revavroom SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/revavroom.png" onClick="RevavroomS()" class="sprite-Revavroom" height="96" width="96" alt="Revavroom" loading="lazy">
+        </figure>
+      </article>
+      <!--944-->
+      <article class="pkmn-card Orthworm dark dragon2">
+        <h3 class="pkmn-name">Orthworm</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/orthworm.png" onClick="Orthworm()" class="sprite-Orthworm" height="96" width="96" alt="Orthworm" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Orthworm dark dragon2">
+        <h3 class="pkmn-name">Orthworm SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/orthworm.png" onClick="OrthwormS()" class="sprite-Orthworm" height="96" width="96" alt="Orthworm" loading="lazy">
+        </figure>
+      </article>
+      <!--946-->
+      <article class="pkmn-card Maushold dark dragon2">
+        <h3 class="pkmn-name">Maushold</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/maushold-family3.png" onClick="Maushold()" class="sprite-Maushold" height="96" width="96" alt="Maushold" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Maushold dark dragon2">
+        <h3 class="pkmn-name">Maushold SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/maushold-family3.png" onClick="MausholdS()" class="sprite-Maushold" height="96" width="96" alt="Maushold" loading="lazy">
+        </figure>
+      </article>
+      <!--948-->
+      <article class="pkmn-card Cetitan dark dragon2">
+        <h3 class="pkmn-name">Cetitan</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/cetitan.png" onClick="Cetitan()" class="sprite-Cetitan" height="96" width="96" alt="Cetitan" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Cetitan dark dragon2">
+        <h3 class="pkmn-name">Cetitan SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/cetitan.png" onClick="CetitanS()" class="sprite-Cetitan" height="96" width="96" alt="Cetitan" loading="lazy">
+        </figure>
+      </article>
+      <!--951-->
+      <article class="pkmn-card Baxcalibur dark dragon2">
+        <h3 class="pkmn-name">Baxcalibur</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/baxcalibur.png" onClick="Baxcalibur()" class="sprite-Baxcalibur" height="96" width="96" alt="Baxcalibur" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Baxcalibur dark dragon2">
+        <h3 class="pkmn-name">Baxcalibur SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/baxcalibur.png" onClick="BaxcaliburS()" class="sprite-Baxcalibur" height="96" width="96" alt="Baxcalibur" loading="lazy">
+        </figure>
+      </article>
+      <!--952-->
+      <article class="pkmn-card Tatsugiri dark dragon2">
+        <h3 class="pkmn-name">Tatsugiri</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/tatsugiri-curly.png" onClick="Tatsugiri()" class="sprite-Tatsugiri" height="96" width="96" alt="Tatsugiri" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Tatsugiri dark dragon2">
+        <h3 class="pkmn-name">Tatsugiri SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/tatsugiri-curly.png" onClick="TatsugiriS()" class="sprite-Tatsugiri" height="96" width="96" alt="Tatsugiri" loading="lazy">
+        </figure>
+      </article>
+      <!--953-->
+      <article class="pkmn-card Cyclizar dark dragon2">
+        <h3 class="pkmn-name">Cyclizar</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/cyclizar.png" onClick="Cyclizar()" class="sprite-Cyclizar" height="96" width="96" alt="Cyclizar" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Cyclizar dark dragon2">
+        <h3 class="pkmn-name">Cyclizar SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/cyclizar.png" onClick="CyclizarS()" class="sprite-Cyclizar" height="96" width="96" alt="Cyclizar" loading="lazy">
+        </figure>
+      </article>
+      <!--956-->
+      <article class="pkmn-card Pawmot dark dragon2">
+        <h3 class="pkmn-name">Pawmot</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmot.png" onClick="Pawmot()" class="sprite-Pawmot" height="96" width="96" alt="Pawmot" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Pawmot dark dragon2">
+        <h3 class="pkmn-name">Pawmot SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/pawmot.png" onClick="PawmotS()" class="sprite-Pawmot" height="96" width="96" alt="Pawmot" loading="lazy">
+        </figure>
+      </article>
+      <!--958-->
+      <article class="pkmn-card Kilowattrel dark dragon2">
+        <h3 class="pkmn-name">Kilowattrel</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/kilowattrel.png" onClick="Kilowattrel()" class="sprite-Kilowattrel" height="96" width="96" alt="Kilowattrel" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Kilowattrel dark dragon2">
+        <h3 class="pkmn-name">Kilowattrel SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/kilowattrel.png" onClick="KilowattrelS()" class="sprite-Kilowattrel" height="96" width="96" alt="Kilowattrel" loading="lazy">
+        </figure>
+      </article>
+      <!--959-->
+      <article class="pkmn-card Bombirdier dark dragon2">
+        <h3 class="pkmn-name">Bombirdier</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/bombirdier.png" onClick="Bombirdier()" class="sprite-Bombirdier" height="96" width="96" alt="Bombirdier" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Bombirdier dark dragon2">
+        <h3 class="pkmn-name">Bombirdier SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/bombirdier.png" onClick="BombirdierS()" class="sprite-Bombirdier" height="96" width="96" alt="Bombirdier" loading="lazy">
+        </figure>
+      </article>
+      <!--960-->
+      <article class="pkmn-card Squawkabilly dark dragon2">
+        <h3 class="pkmn-name">Squawkabilly</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/squawkabilly-green.png" onClick="Squawkabilly()" class="sprite-Squawkabilly" height="96" width="96" alt="Squawkabilly" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Squawkabilly dark dragon2">
+        <h3 class="pkmn-name">Squawkabilly SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/squawkabilly-green.png" onClick="SquawkabillyS()" class="sprite-Squawkabilly" height="96" width="96" alt="Squawkabilly" loading="lazy">
+        </figure>
+      </article>
+      <!--961-->
+      <article class="pkmn-card Flamigo dark dragon2">
+        <h3 class="pkmn-name">Flamigo</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/flamigo.png" onClick="Flamigo()" class="sprite-Flamigo" height="96" width="96" alt="Flamigo" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Flamigo dark dragon2">
+        <h3 class="pkmn-name">Flamigo SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/flamigo.png" onClick="FlamigoS()" class="sprite-Flamigo" height="96" width="96" alt="Flamigo" loading="lazy">
+        </figure>
+      </article>
+      <!--962-->
+      <article class="pkmn-card Klawf dark dragon2">
+        <h3 class="pkmn-name">Klawf</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/klawf.png" onClick="Klawf()" class="sprite-Klawf" height="96" width="96" alt="Klawf" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Klawf dark dragon2">
+        <h3 class="pkmn-name">Klawf SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/klawf.png" onClick="KlawfS()" class="sprite-Klawf" height="96" width="96" alt="Klawf" loading="lazy">
+        </figure>
+      </article>
+      <!--965-->
+      <article class="pkmn-card Garganacl dark dragon2">
+        <h3 class="pkmn-name">Garganacl</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/garganacl.png" onClick="Garganacl()" class="sprite-Garganacl" height="96" width="96" alt="Garganacl" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Garganacl dark dragon2">
+        <h3 class="pkmn-name">Garganacl SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/garganacl.png" onClick="GarganaclS()" class="sprite-Garganacl" height="96" width="96" alt="Garganacl" loading="lazy">
+        </figure>
+      </article>
+      <!--967-->
+      <article class="pkmn-card Glimmora dark dragon2">
+        <h3 class="pkmn-name">Glimmora</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/glimmora.png" onClick="Glimmora()" class="sprite-Glimmora" height="96" width="96" alt="Glimmora" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Glimmora dark dragon2">
+        <h3 class="pkmn-name">Glimmora SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/glimmora.png" onClick="GlimmoraS()" class="sprite-Glimmora" height="96" width="96" alt="Glimmora" loading="lazy">
+        </figure>
+      </article>
+      <!--969-->
+      <article class="pkmn-card Grafaiai dark dragon2">
+        <h3 class="pkmn-name">Grafaiai</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/grafaiai.png" onClick="Grafaiai()" class="sprite-Grafaiai" height="96" width="96" alt="Grafaiai" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Grafaiai dark dragon2">
+        <h3 class="pkmn-name">Grafaiai SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/grafaiai.png" onClick="GrafaiaiS()" class="sprite-Grafaiai" height="96" width="96" alt="Grafaiai" loading="lazy">
+        </figure>
+      </article>
+      <!--971-->
+      <article class="pkmn-card Dachsbun dark dragon2">
+        <h3 class="pkmn-name">Dachsbun</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dachsbun.png" onClick="Dachsbun()" class="sprite-Dachsbun" height="96" width="96" alt="Dachsbun" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Dachsbun dark dragon2">
+        <h3 class="pkmn-name">Dachsbun SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/dachsbun.png" onClick="DachsbunS()" class="sprite-Dachsbun" height="96" width="96" alt="Dachsbun" loading="lazy">
+        </figure>
+      </article>
+      <!--973-->
+      <article class="pkmn-card Mabosstiff dark dragon2">
+        <h3 class="pkmn-name">Mabosstiff</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png" onClick="Mabosstiff()" class="sprite-Mabosstiff" height="96" width="96" alt="Mabosstiff" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Mabosstiff dark dragon2">
+        <h3 class="pkmn-name">Mabosstiff SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/mabosstiff.png" onClick="MabosstiffS()" class="sprite-Mabosstiff" height="96" width="96" alt="Mabosstiff" loading="lazy">
+        </figure>
+      </article>
+      <!--975-->
+      <article class="pkmn-card Brambleghast dark dragon2">
+        <h3 class="pkmn-name">Brambleghast</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/brambleghast.png" onClick="Brambleghast()" class="sprite-Brambleghast" height="96" width="96" alt="Brambleghast" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Brambleghast dark dragon2">
+        <h3 class="pkmn-name">Brambleghast SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/brambleghast.png" onClick="BrambleghastS()" class="sprite-Brambleghast" height="96" width="96" alt="Brambleghast" loading="lazy">
+        </figure>
+      </article>
+      <!--977-->
+      <article class="pkmn-card Gholdengo dark dragon2">
+        <h3 class="pkmn-name">Gholdengo</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/gholdengo.png" onClick="Gholdengo()" class="sprite-Gholdengo" height="96" width="96" alt="Gholdengo" loading="lazy">
+        </figure>
+      </article>
+      <!--978-->
+      <article class="pkmn-card Colmilargo dark dragon2">
+        <h3 class="pkmn-name">Colmilargo</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/great-tusk.png" onClick="Colmilargo()" class="sprite-Colmilargo" height="96" width="96" alt="Colmilargo" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Colmilargo dark dragon2">
+        <h3 class="pkmn-name">Colmilargo SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/great-tusk.png" onClick="ColmilargoS()" class="sprite-Colmilargo" height="96" width="96" alt="Colmilargo" loading="lazy">
+        </figure>
+      </article>
+      <!--979-->
+      <article class="pkmn-card Furioseta dark dragon2">
+        <h3 class="pkmn-name">Furioseta</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/brute-bonnet.png" onClick="Furioseta()" class="sprite-Furioseta" height="96" width="96" alt="Furioseta" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Furioseta dark dragon2">
+        <h3 class="pkmn-name">Furioseta SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/brute-bonnet.png" onClick="FuriosetaS()" class="sprite-Furioseta" height="96" width="96" alt="Furioseta" loading="lazy">
+        </figure>
+      </article>
+      <!--981-->
+      <article class="pkmn-card Pelarena dark dragon2">
+        <h3 class="pkmn-name">Pelarena</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/sandy-shocks.png" onClick="Pelarena()" class="sprite-Pelarena" height="96" width="96" alt="Pelarena" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Pelarena dark dragon2">
+        <h3 class="pkmn-name">Pelarena SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/sandy-shocks.png" onClick="PelarenaS()" class="sprite-Pelarena" height="96" width="96" alt="Pelarena" loading="lazy">
+        </figure>
+      </article>
+      <!--982-->
+      <article class="pkmn-card Colagrito dark dragon2">
+        <h3 class="pkmn-name">Colagrito</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/scream-tail.png" onClick="Colagrito()" class="sprite-Colagrito" height="96" width="96" alt="Colagrito" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Colagrito dark dragon2">
+        <h3 class="pkmn-name">Colagrito SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/scream-tail.png" onClick="ColagritoS()" class="sprite-Colagrito" height="96" width="96" alt="Colagrito" loading="lazy">
+        </figure>
+      </article>
+      <!--983-->
+      <article class="pkmn-card Melenaleteo dark dragon2">
+        <h3 class="pkmn-name">Melenaleteo</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/flutter-mane.png" onClick="Melenaleteo()" class="sprite-Melenaleteo" height="96" width="96" alt="Melenaleteo" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Melenaleteo dark dragon2">
+        <h3 class="pkmn-name">Melenaleteo SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/flutter-mane.png" onClick="MelenaleteoS()" class="sprite-Melenaleteo" height="96" width="96" alt="Melenaleteo" loading="lazy">
+        </figure>
+      </article>
+      <!--984-->
+      <article class="pkmn-card Reptalada dark dragon2">
+        <h3 class="pkmn-name">Reptalada</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/slither-wing.png" onClick="Reptalada()" class="sprite-Reptalada" height="96" width="96" alt="Reptalada" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Reptalada dark dragon2">
+        <h3 class="pkmn-name">Reptalada SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/slither-wing.png" onClick="ReptaladaS()" class="sprite-Reptalada" height="96" width="96" alt="Reptalada" loading="lazy">
+        </figure>
+      </article>
+      <!--985-->
+      <article class="pkmn-card Bramaluna dark dragon2">
+        <h3 class="pkmn-name">Bramaluna</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/roaring-moon.png" onClick="Bramaluna()" class="sprite-Bramaluna" height="96" width="96" alt="Bramaluna" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Bramaluna dark dragon2">
+        <h3 class="pkmn-name">Bramaluna SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/roaring-moon.png" onClick="BramalunaS()" class="sprite-Bramaluna" height="96" width="96" alt="Bramaluna" loading="lazy">
+        </figure>
+      </article>
+      <!--986-->
+      <article class="pkmn-card Ferrodada dark dragon2">
+        <h3 class="pkmn-name">Ferrodada</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-treads.png" onClick="Ferrodada()" class="sprite-Ferrodada" height="96" width="96" alt="Ferrodada" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferrodada dark dragon2">
+        <h3 class="pkmn-name">Ferrodada SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-treads.png" onClick="FerrodadaS()" class="sprite-Ferrodada" height="96" width="96" alt="Ferrodada" loading="lazy">
+        </figure>
+      </article>
+      <!--988-->
+      <article class="pkmn-card Ferropolilla dark dragon2">
+        <h3 class="pkmn-name">Ferropolilla</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-moth.png" onClick="Ferropolilla()" class="sprite-Ferropolilla" height="96" width="96" alt="Ferropolilla" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferropolilla dark dragon2">
+        <h3 class="pkmn-name">Ferropolilla SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-moth.png" onClick="FerropolillaS()" class="sprite-Ferropolilla" height="96" width="96" alt="Ferropolilla" loading="lazy">
+        </figure>
+      </article>
+      <!--989-->
+      <article class="pkmn-card Ferropalmas dark dragon2">
+        <h3 class="pkmn-name">Ferropalmas</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-hands.png" onClick="Ferropalmas()" class="sprite-Ferropalmas" height="96" width="96" alt="Ferropalmas" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferropalmas dark dragon2">
+        <h3 class="pkmn-name">Ferropalmas SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-hands.png" onClick="FerropalmasS()" class="sprite-Ferropalmas" height="96" width="96" alt="Ferropalmas" loading="lazy">
+        </figure>
+      </article>
+      <!--990-->
+      <article class="pkmn-card Ferrocuello dark dragon2">
+        <h3 class="pkmn-name">Ferrocuello</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-jugulis.png" onClick="Ferrocuello()" class="sprite-Ferrocuello" height="96" width="96" alt="Ferrocuello" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferrocuello dark dragon2">
+        <h3 class="pkmn-name">Ferrocuello SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-jugulis.png" onClick="FerrocuelloS()" class="sprite-Ferrocuello" height="96" width="96" alt="Ferrocuello" loading="lazy">
+        </figure>
+      </article>
+      <!--991-->
+      <article class="pkmn-card Ferropúas dark dragon2">
+        <h3 class="pkmn-name">Ferropúas</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-thorns.png" onClick="Ferropúas()" class="sprite-Ferropúas" height="96" width="96" alt="Ferropúas" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferropúas dark dragon2">
+        <h3 class="pkmn-name">Ferropúas SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-thorns.png" onClick="FerropúasS()" class="sprite-Ferropúas" height="96" width="96" alt="Ferropúas" loading="lazy">
+        </figure>
+      </article>
+      <!--992-->
+      <article class="pkmn-card Ferrosaco dark dragon2">
+        <h3 class="pkmn-name">Ferrosaco</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-bundle.png" onClick="Ferrosaco()" class="sprite-Ferrosaco" height="96" width="96" alt="Ferrosaco" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferrosaco dark dragon2">
+        <h3 class="pkmn-name">Ferrosaco SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-bundle.png" onClick="FerrosacoS()" class="sprite-Ferrosaco" height="96" width="96" alt="Ferrosaco" loading="lazy">
+        </figure>
+      </article>
+      <!--993-->
+      <article class="pkmn-card Ferropaladín dark dragon2">
+        <h3 class="pkmn-name">Ferropaladín</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-valiant.png" onClick="Ferropaladín()" class="sprite-Ferropaladín" height="96" width="96" alt="Ferropaladín" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ferropaladín dark dragon2">
+        <h3 class="pkmn-name">Ferropaladín SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/iron-valiant.png" onClick="FerropaladínS()" class="sprite-Ferropaladín" height="96" width="96" alt="Ferropaladín" loading="lazy">
+        </figure>
+      </article>
+      <!--994-->
+      <article class="pkmn-card TingLu dark dragon2">
+        <h3 class="pkmn-name">TingLu</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/ting-lu.png" onClick="TingLu()" class="sprite-TingLu" height="96" width="96" alt="TingLu" loading="lazy">
+        </figure>
+      </article>
+      <!--995-->
+      <article class="pkmn-card ChienPao dark dragon2">
+        <h3 class="pkmn-name">ChienPao</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/chien-pao.png" onClick="ChienPao()" class="sprite-ChienPao" height="96" width="96" alt="ChienPao" loading="lazy">
+        </figure>
+      </article>
+      <!--996-->
+      <article class="pkmn-card WoChien dark dragon2">
+        <h3 class="pkmn-name">WoChien</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/wo-chien.png" onClick="WoChien()" class="sprite-WoChien" height="96" width="96" alt="WoChien" loading="lazy">
+        </figure>
+      </article>
+      <!--997-->
+      <article class="pkmn-card ChiYu dark dragon2">
+        <h3 class="pkmn-name">ChiYu</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/chi-yu.png" onClick="ChiYu()" class="sprite-ChiYu" height="96" width="96" alt="ChiYu" loading="lazy">
+        </figure>
+      </article>
+      <!--998-->
+      <article class="pkmn-card Koraidon dark dragon2">
+        <h3 class="pkmn-name">Koraidon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/koraidon.png" onClick="Koraidon()" class="sprite-Koraidon" height="96" width="96" alt="Koraidon" loading="lazy">
+        </figure>
+      </article>
+      <!--999-->
+      <article class="pkmn-card Miraidon dark dragon2">
+        <h3 class="pkmn-name">Miraidon</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/miraidon.png" onClick="Miraidon()" class="sprite-Miraidon" height="96" width="96" alt="Miraidon" loading="lazy">
+        </figure>
+      </article>
+      <!--1002-->
+      <article class="pkmn-card Tinkaton dark dragon2">
+        <h3 class="pkmn-name">Tinkaton</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkaton.png" onClick="Tinkaton()" class="sprite-Tinkaton" height="96" width="96" alt="Tinkaton" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Tinkaton dark dragon2">
+        <h3 class="pkmn-name">Tinkaton SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/tinkaton.png" onClick="TinkatonS()" class="sprite-Tinkaton" height="96" width="96" alt="Tinkaton" loading="lazy">
+        </figure>
+      </article>
+      <!--1004-->
+      <article class="pkmn-card Armarouge dark dragon2">
+        <h3 class="pkmn-name">Armarouge</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/armarouge.png" onClick="Armarouge()" class="sprite-Armarouge" height="96" width="96" alt="Armarouge" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Armarouge dark dragon2">
+        <h3 class="pkmn-name">Armarouge SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/armarouge.png" onClick="ArmarougeS()" class="sprite-Armarouge" height="96" width="96" alt="Armarouge" loading="lazy">
+        </figure>
+      </article>
+      <!--1005-->
+      <article class="pkmn-card Ceruledge dark dragon2">
+        <h3 class="pkmn-name">Ceruledge</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/ceruledge.png" onClick="Ceruledge()" class="sprite-Ceruledge" height="96" width="96" alt="Ceruledge" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Ceruledge dark dragon2">
+        <h3 class="pkmn-name">Ceruledge SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/ceruledge.png" onClick="CeruledgeS()" class="sprite-Ceruledge" height="96" width="96" alt="Ceruledge" loading="lazy">
+        </figure>
+      </article>
+      <!--1007-->
+      <article class="pkmn-card Toedscruel dark dragon2">
+        <h3 class="pkmn-name">Toedscruel</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/toedscruel.png" onClick="Toedscruel()" class="sprite-Toedscruel" height="96" width="96" alt="Toedscruel" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Toedscruel dark dragon2">
+        <h3 class="pkmn-name">Toedscruel SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/toedscruel.png" onClick="ToedscruelS()" class="sprite-Toedscruel" height="96" width="96" alt="Toedscruel" loading="lazy">
+        </figure>
+      </article>
+      <!--1008-->
+      <article class="pkmn-card Kingambit dark dragon2">
+        <h3 class="pkmn-name">Kingambit</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/kingambit.png" onClick="Kingambit()" class="sprite-Kingambit" height="96" width="96" alt="Kingambit" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Kingambit dark dragon2">
+        <h3 class="pkmn-name">Kingambit SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/kingambit.png" onClick="KingambitS()" class="sprite-Kingambit" height="96" width="96" alt="Kingambit" loading="lazy">
+        </figure>
+      </article>
+      <!--1009-->
+      <article class="pkmn-card Clodsire dark dragon2">
+        <h3 class="pkmn-name">Clodsire</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/clodsire.png" onClick="Clodsire()" class="sprite-Clodsire" height="96" width="96" alt="Clodsire" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Clodsire dark dragon2">
+        <h3 class="pkmn-name">Clodsire SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/clodsire.png" onClick="ClodsireS()" class="sprite-Clodsire" height="96" width="96" alt="Clodsire" loading="lazy">
+        </figure>
+      </article>
+      <!--1010-->
+      <article class="pkmn-card Annihilape dark dragon2">
+        <h3 class="pkmn-name">Annihilape</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/annihilape.png" onClick="Annihilape()" class="sprite-Annihilape" height="96" width="96" alt="Annihilape" loading="lazy">
+        </figure>
+      </article>
+      <article class="pkmn-card Annihilape dark dragon2">
+        <h3 class="pkmn-name">Annihilape SHINY</h3>
+        <figure class="asset">
+          <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/annihilape.png" onClick="AnnihilapeS()" class="sprite-Annihilape" height="96" width="96" alt="Annihilape" loading="lazy">
+        </figure>
+      </article>
+    </section>
+  </main> 
+  <script src="./script/class.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="./script/listeners.js"></script>
+
+  <!--Codigos Pokemon-->
+  <!--006-->
+  <script> function Charizard() { var copyText = document.getElementById("myInput006"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+  <script> function CharizardS() { var copyText = document.getElementById("myInput006S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+  <!--149-->
+  <script> function Dragonite() { var copyText = document.getElementById("myInput149"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+  <script> function DragoniteS() { var copyText = document.getElementById("myInput149S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+  
+  <!--SEGUNDA GENERACION-->
+<!--196-->
+<script> function Espeon() { var copyText = document.getElementById("myInput196"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function EspeonS() { var copyText = document.getElementById("myInput196S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--197-->
+<script> function Umbreon() { var copyText = document.getElementById("myInput197"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function UmbreonS() { var copyText = document.getElementById("myInput197S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+  <!--TERCERA GENERACION-->
+<!--373-->
+<script> function salamence() { var copyText = document.getElementById("myInput373"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function salamenceS() { var copyText = document.getElementById("myInput373S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--CUARTA GENERACION-->
+<!--445-->
+<script> function Garchomp() { var copyText = document.getElementById("myInput445"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function GarchompS() { var copyText = document.getElementById("myInput445S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--448-->
+<script> function Lucario() { var copyText = document.getElementById("myInput448"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function LucarioS() { var copyText = document.getElementById("myInput448S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--QUINTA GENERACION-->
+<!--553-->
+<script> function krookodile() { var copyText = document.getElementById("myInput553"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function krookodileS() { var copyText = document.getElementById("myInput553S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--625-->
+<script> function bisharp() { var copyText = document.getElementById("myInput625"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function bisharpS() { var copyText = document.getElementById("myInput625S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--SEXTA GENERACION-->
+<!--663-->
+<script> function talonflame() { var copyText = document.getElementById("myInput663"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function talonflameS() { var copyText = document.getElementById("myInput663S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--706-->
+<script> function goodra() { var copyText = document.getElementById("myInput706"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function goodraS() { var copyText = document.getElementById("myInput706S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--SEPTIMA GENERACION-->
+<!--748-->
+<script> function toxapex() { var copyText = document.getElementById("myInput748"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function toxapexS() { var copyText = document.getElementById("myInput748S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--778-->
+<script> function mimikyu() { var copyText = document.getElementById("myInput778"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function mimikyuS() { var copyText = document.getElementById("myInput778S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--OCTAVA GENERACION-->
+<!--823-->
+<script> function corviknigth() { var copyText = document.getElementById("myInput823"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function corviknigthS() { var copyText = document.getElementById("myInput823S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--887-->
+<script> function dragapult() { var copyText = document.getElementById("myInput887"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function dragapultS() { var copyText = document.getElementById("myInput887S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+
+<!--NOVENA GENERACION-->
+<!--908-->
+<script> function Meowscarada() { var copyText = document.getElementById("myInput908"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function MeowscaradaS() { var copyText = document.getElementById("myInput908S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--911-->
+<script> function Skeledirge() { var copyText = document.getElementById("myInput911"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function SkeledirgeS() { var copyText = document.getElementById("myInput911S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--914-->
+<script> function Quaquaval() { var copyText = document.getElementById("myInput914"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function QuaquavalS() { var copyText = document.getElementById("myInput914S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--916-->
+<script> function Oinkologne() { var copyText = document.getElementById("myInput916"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function OinkologneS() { var copyText = document.getElementById("myInput916S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--917-->
+<script> function Dudunsparce() { var copyText = document.getElementById("myInput917"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function DudunsparceS() { var copyText = document.getElementById("myInput917S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--919-->
+<script> function Spidops() { var copyText = document.getElementById("myInput919"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function SpidopsS() { var copyText = document.getElementById("myInput919S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--921-->
+<script> function Lokix() { var copyText = document.getElementById("myInput921"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function LokixS() { var copyText = document.getElementById("myInput921S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--923-->
+<script> function Rabsca() { var copyText = document.getElementById("myInput923"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function RabscaS() { var copyText = document.getElementById("myInput923S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--925-->
+<script> function Houndstone() { var copyText = document.getElementById("myInput925"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function HoundstoneS() { var copyText = document.getElementById("myInput925S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--927-->
+<script> function Espathra() { var copyText = document.getElementById("myInput927"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function EspathraS() { var copyText = document.getElementById("myInput927S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--928-->
+<script> function Farigiraf() { var copyText = document.getElementById("myInput928"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FarigirafS() { var copyText = document.getElementById("myInput928S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--930-->
+<script> function Wugtrio() { var copyText = document.getElementById("myInput930"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function WugtrioS() { var copyText = document.getElementById("myInput930S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--931-->
+<script> function Dondozo() { var copyText = document.getElementById("myInput931"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function DondozoS() { var copyText = document.getElementById("myInput931S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--932-->
+<script> function Veluza() { var copyText = document.getElementById("myInput932"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function VeluzaS() { var copyText = document.getElementById("myInput932S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--934-->
+<script> function Palafin() { var copyText = document.getElementById("myInput934"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function PalafinS() { var copyText = document.getElementById("myInput934S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--937-->
+<script> function Arboliva() { var copyText = document.getElementById("myInput937"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ArbolivaS() { var copyText = document.getElementById("myInput937S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--939-->
+<script> function Scovillain() { var copyText = document.getElementById("myInput939"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ScovillainS() { var copyText = document.getElementById("myInput939S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--941-->
+<script> function Bellibolt() { var copyText = document.getElementById("myInput941"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function BelliboltS() { var copyText = document.getElementById("myInput941S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--943-->
+<script> function Revavroom() { var copyText = document.getElementById("myInput943"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function RevavroomS() { var copyText = document.getElementById("myInput943S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--944-->
+<script> function Orthworm() { var copyText = document.getElementById("myInput944"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function OrthwormS() { var copyText = document.getElementById("myInput944S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--946-->
+<script> function Maushold() { var copyText = document.getElementById("myInput946"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function MausholdS() { var copyText = document.getElementById("myInput946S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--948-->
+<script> function Cetitan() { var copyText = document.getElementById("myInput948"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function CetitanS() { var copyText = document.getElementById("myInput948S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--951-->
+<script> function Baxcalibur() { var copyText = document.getElementById("myInput951"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function BaxcaliburS() { var copyText = document.getElementById("myInput951S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--952-->
+<script> function Tatsugiri() { var copyText = document.getElementById("myInput952"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function TatsugiriS() { var copyText = document.getElementById("myInput952S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--953-->
+<script> function Cyclizar() { var copyText = document.getElementById("myInput953"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function CyclizarS() { var copyText = document.getElementById("myInput953S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--956-->
+<script> function Pawmot() { var copyText = document.getElementById("myInput956"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function PawmotS() { var copyText = document.getElementById("myInput956S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--958-->
+<script> function Kilowattrel() { var copyText = document.getElementById("myInput958"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function KilowattrelS() { var copyText = document.getElementById("myInput958S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--959-->
+<script> function Bombirdier() { var copyText = document.getElementById("myInput959"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function BombirdierS() { var copyText = document.getElementById("myInput959S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--960-->
+<script> function Squawkabilly() { var copyText = document.getElementById("myInput960"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function SquawkabillyS() { var copyText = document.getElementById("myInput960S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--961-->
+<script> function Flamigo() { var copyText = document.getElementById("myInput961"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FlamigoS() { var copyText = document.getElementById("myInput961S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--962-->
+<script> function Klawf() { var copyText = document.getElementById("myInput962"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function KlawfS() { var copyText = document.getElementById("myInput962S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--965-->
+<script> function Garganacl() { var copyText = document.getElementById("myInput965"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function GarganaclS() { var copyText = document.getElementById("myInput965S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--967-->
+<script> function Glimmora() { var copyText = document.getElementById("myInput967"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function GlimmoraS() { var copyText = document.getElementById("myInput967S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--969-->
+<script> function Grafaiai() { var copyText = document.getElementById("myInput969"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function GrafaiaiS() { var copyText = document.getElementById("myInput969S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--971-->
+<script> function Dachsbun() { var copyText = document.getElementById("myInput971"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function DachsbunS() { var copyText = document.getElementById("myInput971S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--973-->
+<script> function Mabosstiff() { var copyText = document.getElementById("myInput973"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function MabosstiffS() { var copyText = document.getElementById("myInput973S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--975-->
+<script> function Brambleghast() { var copyText = document.getElementById("myInput975"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function BrambleghastS() { var copyText = document.getElementById("myInput975S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--977-->
+<script> function Gholdengo() { var copyText = document.getElementById("myInput977"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--978-->
+<script> function Colmilargo() { var copyText = document.getElementById("myInput978"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ColmilargoS() { var copyText = document.getElementById("myInput978S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--979-->
+<script> function Furioseta() { var copyText = document.getElementById("myInput979"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FuriosetaS() { var copyText = document.getElementById("myInput979S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--981-->
+<script> function Pelarena() { var copyText = document.getElementById("myInput981"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function PelarenaS() { var copyText = document.getElementById("myInput981S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--982-->
+<script> function Colagrito() { var copyText = document.getElementById("myInput982"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ColagritoS() { var copyText = document.getElementById("myInput982S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--983-->
+<script> function Melenaleteo() { var copyText = document.getElementById("myInput983"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function MelenaleteoS() { var copyText = document.getElementById("myInput983S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--984-->
+<script> function Reptalada() { var copyText = document.getElementById("myInput984"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ReptaladaS() { var copyText = document.getElementById("myInput984S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--985-->
+<script> function Bramaluna() { var copyText = document.getElementById("myInput985"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function BramalunaS() { var copyText = document.getElementById("myInput985S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--986-->
+<script> function Ferrodada() { var copyText = document.getElementById("myInput986"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerrodadaS() { var copyText = document.getElementById("myInput986S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--988-->
+<script> function Ferropolilla() { var copyText = document.getElementById("myInput988"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerropolillaS() { var copyText = document.getElementById("myInput988S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--989-->
+<script> function Ferropalmas() { var copyText = document.getElementById("myInput989"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerropalmasS() { var copyText = document.getElementById("myInput989S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--990-->
+<script> function Ferrocuello() { var copyText = document.getElementById("myInput990"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerrocuelloS() { var copyText = document.getElementById("myInput990S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--991-->
+<script> function Ferropúas() { var copyText = document.getElementById("myInput991"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerropúasS() { var copyText = document.getElementById("myInput991S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--992-->
+<script> function Ferrosaco() { var copyText = document.getElementById("myInput992"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerrosacoS() { var copyText = document.getElementById("myInput992S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--993-->
+<script> function Ferropaladín() { var copyText = document.getElementById("myInput993"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function FerropaladínS() { var copyText = document.getElementById("myInput993S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--994-->
+<script> function TingLu() { var copyText = document.getElementById("myInput994"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--995-->
+<script> function ChienPao() { var copyText = document.getElementById("myInput995"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--996-->
+<script> function WoChien() { var copyText = document.getElementById("myInput996"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--997-->
+<script> function ChiYu() { var copyText = document.getElementById("myInput997"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--998-->
+<script> function Koraidon() { var copyText = document.getElementById("myInput998"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--999-->
+<script> function Miraidon() { var copyText = document.getElementById("myInput999"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<!--1002-->
+<script> function Tinkaton() { var copyText = document.getElementById("myInput1002"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function TinkatonS() { var copyText = document.getElementById("myInput1002S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1004-->
+<script> function Armarouge() { var copyText = document.getElementById("myInput1004"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ArmarougeS() { var copyText = document.getElementById("myInput1004S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1005-->
+<script> function Ceruledge() { var copyText = document.getElementById("myInput1005"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function CeruledgeS() { var copyText = document.getElementById("myInput1005S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1007-->
+<script> function Toedscruel() { var copyText = document.getElementById("myInput1007"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ToedscruelS() { var copyText = document.getElementById("myInput1007S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1008-->
+<script> function Kingambit() { var copyText = document.getElementById("myInput1008"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function KingambitS() { var copyText = document.getElementById("myInput1008S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1009-->
+<script> function Clodsire() { var copyText = document.getElementById("myInput1009"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function ClodsireS() { var copyText = document.getElementById("myInput1009S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+<!--1010-->
+<script> function Annihilape() { var copyText = document.getElementById("myInput1010"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>
+<script> function AnnihilapeS() { var copyText = document.getElementById("myInput1010S"); navigator.clipboard.writeText(copyText.value); alert("POKEMON ATRAPADO: " + copyText.value) } </script>  
+
+
+<!--Codigos Pokemon-->
+  <!--006-->
+  <input value="Entrenador Misterioso quiero un 006Charizard normal" id="myInput006" type="hidden"></input>
+  <input value="Entrenador Misterioso quiero un 006Charizard shiny" id="myInput006S" type="hidden"></input>
+  <!--149-->
+  <input value="Entrenador Misterioso quiero un 149Dragonite normal" id="myInput149" type="hidden"></input>
+  <input value="Entrenador Misterioso quiero un 149Dragonite shiny" id="myInput149S" type="hidden"></input>
+  
+  <!--SEGUNDA GENERACION-->
+<!--196-->
+<input value="Entrenador Misterioso quiero un 196Espeon normal" id="myInput196" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 196Espeon shiny" id="myInput196S" type="hidden"></input>
+<!--197-->
+<input value="Entrenador Misterioso quiero un 197Umbreon normal" id="myInput197" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 197Umbreon shiny" id="myInput197S" type="hidden"></input>
+
+  <!--TERCERA GENERACION-->
+<!--373-->
+<input value="Entrenador Misterioso quiero un 373Salamence normal" id="myInput373" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 373Salamence shiny" id="myInput373S" type="hidden"></input>
+
+<!--CUARTA GENERACION-->
+<!--445-->
+<input value="Entrenador Misterioso quiero un 445Garchomp normal" id="myInput445" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 445Garchomp shiny" id="myInput445S" type="hidden"></input>
+<!--448-->
+<input value="Entrenador Misterioso quiero un 448Lucario normal" id="myInput448" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 448Lucario shiny" id="myInput448S" type="hidden"></input>
+
+<!--QUINTA GENERACION-->
+<!--553-->
+<input value="Entrenador Misterioso quiero un 553Krookodile normal" id="myInput553" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 553Krookodile shiny" id="myInput553S" type="hidden"></input>
+<!--625-->
+<input value="Entrenador Misterioso quiero un 625Bisharp normal" id="myInput625" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 625Bisharp shiny" id="myInput625S" type="hidden"></input>
+
+<!--SEXTA GENERACION-->
+<!--663-->
+<input value="Entrenador Misterioso quiero un 663Talonflame normal" id="myInput663" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 663Talonflame shiny" id="myInput663S" type="hidden"></input>
+<!--706-->
+<input value="Entrenador Misterioso quiero un 706Goodra normal" id="myInput706" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 706Goodra shiny" id="myInput706S" type="hidden"></input>
+
+<!--SEPTIMA GENERACION-->
+<!--748-->
+<input value="Entrenador Misterioso quiero un 748Toxapex normal" id="myInput748" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 748Toxapex shiny" id="myInput748S" type="hidden"></input>
+<!--778-->
+<input value="Entrenador Misterioso quiero un 778Mimikyu normal" id="myInput778" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 778Mimikyu shiny" id="myInput778S" type="hidden"></input>
+
+<!--OCTAVA GENERACION-->
+<!--823-->
+<input value="Entrenador Misterioso quiero un 823Corviknight normal" id="myInput823" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 823Corviknight shiny" id="myInput823S" type="hidden"></input>
+<!--887-->
+<input value="Entrenador Misterioso quiero un 887Dragapult normal" id="myInput887" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 887Dragapult shiny" id="myInput887S" type="hidden"></input>
+
+<!--NOVENA GENERACION-->
+<!--908-->
+<input value="Entrenador Misterioso quiero un 908Meowscarada normal" id="myInput908" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 908Meowscarada shiny" id="myInput908S" type="hidden"></input>
+<!--911-->
+<input value="Entrenador Misterioso quiero un 911Skeledirge normal" id="myInput911" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 911Skeledirge shiny" id="myInput911S" type="hidden"></input>
+<!--914-->
+<input value="Entrenador Misterioso quiero un 914Quaquaval normal" id="myInput914" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 914Quaquaval shiny" id="myInput914S" type="hidden"></input>
+<!--916-->
+<input value="Entrenador Misterioso quiero un 916Oinkologne normal" id="myInput916" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 916Oinkologne shiny" id="myInput916S" type="hidden"></input>
+<!--917-->
+<input value="Entrenador Misterioso quiero un 917Dudunsparce normal" id="myInput917" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 917Dudunsparce shiny" id="myInput917S" type="hidden"></input>
+<!--919-->
+<input value="Entrenador Misterioso quiero un 919Spidops normal" id="myInput919" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 919Spidops shiny" id="myInput919S" type="hidden"></input>
+<!--921-->
+<input value="Entrenador Misterioso quiero un 921Lokix normal" id="myInput921" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 921Lokix shiny" id="myInput921S" type="hidden"></input>
+<!--923-->
+<input value="Entrenador Misterioso quiero un 923Rabsca normal" id="myInput923" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 923Rabsca shiny" id="myInput923S" type="hidden"></input>
+<!--925-->
+<input value="Entrenador Misterioso quiero un 925Houndstone normal" id="myInput925" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 925Houndstone shiny" id="myInput925S" type="hidden"></input>
+<!--927-->
+<input value="Entrenador Misterioso quiero un 927Espathra normal" id="myInput927" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 927Espathra shiny" id="myInput927S" type="hidden"></input>
+<!--928-->
+<input value="Entrenador Misterioso quiero un 928Farigiraf normal" id="myInput928" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 928Farigiraf shiny" id="myInput928S" type="hidden"></input>
+<!--930-->
+<input value="Entrenador Misterioso quiero un 930Wugtrio normal" id="myInput930" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 930Wugtrio shiny" id="myInput930S" type="hidden"></input>
+<!--931-->
+<input value="Entrenador Misterioso quiero un 931Dondozo normal" id="myInput931" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 931Dondozo shiny" id="myInput931S" type="hidden"></input>
+<!--932-->
+<input value="Entrenador Misterioso quiero un 932Veluza normal" id="myInput932" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 932Veluza shiny" id="myInput932S" type="hidden"></input>
+<!--934-->
+<input value="Entrenador Misterioso quiero un 934Palafin normal" id="myInput934" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 934Palafin shiny" id="myInput934S" type="hidden"></input>
+<!--937-->
+<input value="Entrenador Misterioso quiero un 937Arboliva normal" id="myInput937" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 937Arboliva shiny" id="myInput937S" type="hidden"></input>
+<!--939-->
+<input value="Entrenador Misterioso quiero un 939Scovillain normal" id="myInput939" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 939Scovillain shiny" id="myInput939S" type="hidden"></input>
+<!--941-->
+<input value="Entrenador Misterioso quiero un 941Bellibolt normal" id="myInput941" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 941Bellibolt shiny" id="myInput941S" type="hidden"></input>
+<!--943-->
+<input value="Entrenador Misterioso quiero un 943Revavroom normal" id="myInput943" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 943Revavroom shiny" id="myInput943S" type="hidden"></input>
+<!--944-->
+<input value="Entrenador Misterioso quiero un 944Orthworm normal" id="myInput944" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 944Orthworm shiny" id="myInput944S" type="hidden"></input>
+<!--946-->
+<input value="Entrenador Misterioso quiero un 946Maushold normal" id="myInput946" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 946Maushold shiny" id="myInput946S" type="hidden"></input>
+<!--948-->
+<input value="Entrenador Misterioso quiero un 948Cetitan normal" id="myInput948" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 948Cetitan shiny" id="myInput948S" type="hidden"></input>
+<!--951-->
+<input value="Entrenador Misterioso quiero un 951Baxcalibur normal" id="myInput951" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 951Baxcalibur shiny" id="myInput951S" type="hidden"></input>
+<!--952-->
+<input value="Entrenador Misterioso quiero un 952Tatsugiri normal" id="myInput952" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 952Tatsugiri shiny" id="myInput952S" type="hidden"></input>
+<!--953-->
+<input value="Entrenador Misterioso quiero un 953Cyclizar normal" id="myInput953" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 953Cyclizar shiny" id="myInput953S" type="hidden"></input>
+<!--956-->
+<input value="Entrenador Misterioso quiero un 956Pawmot normal" id="myInput956" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 956Pawmot shiny" id="myInput956S" type="hidden"></input>
+<!--958-->
+<input value="Entrenador Misterioso quiero un 958Kilowattrel normal" id="myInput958" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 958Kilowattrel shiny" id="myInput958S" type="hidden"></input>
+<!--959-->
+<input value="Entrenador Misterioso quiero un 959Bombirdier normal" id="myInput959" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 959Bombirdier shiny" id="myInput959S" type="hidden"></input>
+<!--960-->
+<input value="Entrenador Misterioso quiero un 960Squawkabilly normal" id="myInput960" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 960Squawkabilly shiny" id="myInput960S" type="hidden"></input>
+<!--961-->
+<input value="Entrenador Misterioso quiero un 961Flamigo normal" id="myInput961" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 961Flamigo shiny" id="myInput961S" type="hidden"></input>
+<!--962-->
+<input value="Entrenador Misterioso quiero un 962Klawf normal" id="myInput962" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 962Klawf shiny" id="myInput962S" type="hidden"></input>
+<!--965-->
+<input value="Entrenador Misterioso quiero un 965Garganacl normal" id="myInput965" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 965Garganacl shiny" id="myInput965S" type="hidden"></input>
+<!--967-->
+<input value="Entrenador Misterioso quiero un 967Glimmora normal" id="myInput967" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 967Glimmora shiny" id="myInput967S" type="hidden"></input>
+<!--969-->
+<input value="Entrenador Misterioso quiero un 969Grafaiai normal" id="myInput969" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 969Grafaiai shiny" id="myInput969S" type="hidden"></input>
+<!--971-->
+<input value="Entrenador Misterioso quiero un 971Dachsbun normal" id="myInput971" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 971Dachsbun shiny" id="myInput971S" type="hidden"></input>
+<!--973-->
+<input value="Entrenador Misterioso quiero un 973Mabosstiff normal" id="myInput973" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 973Mabosstiff shiny" id="myInput973S" type="hidden"></input>
+<!--975-->
+<input value="Entrenador Misterioso quiero un 975Brambleghast normal" id="myInput975" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 975Brambleghast shiny" id="myInput975S" type="hidden"></input>
+<!--977-->
+<input value="Entrenador Misterioso quiero un 977Gholdengo normal" id="myInput977" type="hidden"></input>
+<!--978-->
+<input value="Entrenador Misterioso quiero un 978Colmilargo normal" id="myInput978" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 978Colmilargo shiny" id="myInput978S" type="hidden"></input>
+<!--979-->
+<input value="Entrenador Misterioso quiero un 979Furioseta normal" id="myInput979" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 979Furioseta shiny" id="myInput979S" type="hidden"></input>
+<!--981-->
+<input value="Entrenador Misterioso quiero un 981Pelarena normal" id="myInput981" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 981Pelarena shiny" id="myInput981S" type="hidden"></input>
+<!--982-->
+<input value="Entrenador Misterioso quiero un 982Colagrito normal" id="myInput982" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 982Colagrito shiny" id="myInput982S" type="hidden"></input>
+<!--983-->
+<input value="Entrenador Misterioso quiero un 983Melenaleteo normal" id="myInput983" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 983Melenaleteo shiny" id="myInput983S" type="hidden"></input>
+<!--984-->
+<input value="Entrenador Misterioso quiero un 984Reptalada normal" id="myInput984" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 984Reptalada shiny" id="myInput984S" type="hidden"></input>
+<!--985-->
+<input value="Entrenador Misterioso quiero un 985Bramaluna normal" id="myInput985" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 985Bramaluna shiny" id="myInput985S" type="hidden"></input>
+<!--986-->
+<input value="Entrenador Misterioso quiero un 986Ferrodada normal" id="myInput986" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 986Ferrodada shiny" id="myInput986S" type="hidden"></input>
+<!--988-->
+<input value="Entrenador Misterioso quiero un 988Ferropolilla normal" id="myInput988" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 988Ferropolilla shiny" id="myInput988S" type="hidden"></input>
+<!--989-->
+<input value="Entrenador Misterioso quiero un 989Ferropalmas normal" id="myInput989" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 989Ferropalmas shiny" id="myInput989S" type="hidden"></input>
+<!--990-->
+<input value="Entrenador Misterioso quiero un 990Ferrocuello normal" id="myInput990" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 990Ferrocuello shiny" id="myInput990S" type="hidden"></input>
+<!--991-->
+<input value="Entrenador Misterioso quiero un 991Ferropúas normal" id="myInput991" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 991Ferropúas shiny" id="myInput991S" type="hidden"></input>
+<!--992-->
+<input value="Entrenador Misterioso quiero un 992Ferrosaco normal" id="myInput992" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 992Ferrosaco shiny" id="myInput992S" type="hidden"></input>
+<!--993-->
+<input value="Entrenador Misterioso quiero un 993Ferropaladín normal" id="myInput993" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 993Ferropaladín shiny" id="myInput993S" type="hidden"></input>
+<!--994-->
+<input value="Entrenador Misterioso quiero un 994TingLu normal" id="myInput994" type="hidden"></input>
+<!--995-->
+<input value="Entrenador Misterioso quiero un 995ChienPao normal" id="myInput995" type="hidden"></input>
+<!--996-->
+<input value="Entrenador Misterioso quiero un 996WoChien normal" id="myInput996" type="hidden"></input>
+<!--997-->
+<input value="Entrenador Misterioso quiero un 997ChiYu normal" id="myInput997" type="hidden"></input>
+<!--998-->
+<input value="Entrenador Misterioso quiero un 998Koraidon normal" id="myInput998" type="hidden"></input>
+<!--999-->
+<input value="Entrenador Misterioso quiero un 999Miraidon normal" id="myInput999" type="hidden"></input>
+<!--1002-->
+<input value="Entrenador Misterioso quiero un 1002Tinkaton normal" id="myInput1002" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1002Tinkaton shiny" id="myInput1002S" type="hidden"></input>
+<!--1004-->
+<input value="Entrenador Misterioso quiero un 1004Armarouge normal" id="myInput1004" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1004Armarouge shiny" id="myInput1004S" type="hidden"></input>
+<!--1005-->
+<input value="Entrenador Misterioso quiero un 1005Ceruledge normal" id="myInput1005" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1005Ceruledge shiny" id="myInput1005S" type="hidden"></input>
+<!--1007-->
+<input value="Entrenador Misterioso quiero un 1007Toedscruel normal" id="myInput1007" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1007Toedscruel shiny" id="myInput1007S" type="hidden"></input>
+<!--1008-->
+<input value="Entrenador Misterioso quiero un 1008Kingambit normal" id="myInput1008" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1008Kingambit shiny" id="myInput1008S" type="hidden"></input>
+<!--1009-->
+<input value="Entrenador Misterioso quiero un 1009Clodsire normal" id="myInput1009" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1009Clodsire shiny" id="myInput1009S" type="hidden"></input>
+<!--1010-->
+<input value="Entrenador Misterioso quiero un 1010Annihilape normal" id="myInput1010" type="hidden"></input>
+<input value="Entrenador Misterioso quiero un 1010Annihilape shiny" id="myInput1010S" type="hidden"></input>
+
+</body>
+</html>
